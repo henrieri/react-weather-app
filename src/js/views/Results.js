@@ -376,7 +376,7 @@ export default class Results extends Component {
           <Link className="btn btn--back" to="/">
             <IconBack />
           </Link>
-          <h1 className="city">{this.state.city}</h1>
+          <h1 className="city">{this.state.currentWeatherData.name}</h1>
           <div className="toggle-metrics">
             {this.renderToggleButton()}
           </div>
