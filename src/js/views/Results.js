@@ -96,6 +96,10 @@ export default class Results extends Component {
 
   handleError(error) {
 
+    if (typeof error === 'object') {
+      error = error.message;
+    }
+
     this.setState({
       isError: true,
       errorMessage: error

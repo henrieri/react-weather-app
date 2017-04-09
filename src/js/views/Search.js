@@ -21,6 +21,11 @@ export default class Search extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
+    if (this.state.city.length < 1) {
+      return;
+    }
+
     this.setState({
       shouldSearch: true
     });
