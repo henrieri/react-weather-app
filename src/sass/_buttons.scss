@@ -1,0 +1,27 @@
+.btn {
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &:hover {
+    outline: none;
+  }
+
+  &.btn--search {
+
+  }
+
+  &.btn--back {
+    width: 36px;
+    height: 36px;
+  }
+}

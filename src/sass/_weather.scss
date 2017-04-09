@@ -1,0 +1,175 @@
+$day-sunny: "\f00d";
+$day-cloudy: "\f002";
+$day-cloudy-gusts: "\f000";
+$day-cloudy-windy: "\f001";
+$day-fog: "\f003";
+$day-hail: "\f004";
+$day-haze: "\f0b6";
+$day-lightning: "\f005";
+$day-rain: "\f008";
+$day-rain-mix: "\f006";
+$day-rain-wind: "\f007";
+$day-showers: "\f009";
+$day-sleet: "\f0b2";
+$day-sleet-storm: "\f068";
+$day-snow: "\f00a";
+$day-snow-thunderstorm: "\f06b";
+$day-snow-wind: "\f065";
+$day-sprinkle: "\f00b";
+$day-storm-showers: "\f00e";
+$day-sunny-overcast: "\f00c";
+$day-thunderstorm: "\f010";
+$day-windy: "\f085";
+$solar-eclipse: "\f06e";
+$hot: "\f072";
+$day-cloudy-high: "\f07d";
+$day-light-wind: "\f0c4";
+
+$night-clear: "\f02e";
+$night-alt-cloudy: "\f086";
+$night-alt-cloudy-gusts: "\f022";
+$night-alt-cloudy-windy: "\f023";
+$night-alt-hail: "\f024";
+$night-alt-lightning: "\f025";
+$night-alt-rain: "\f028";
+$night-alt-rain-mix: "\f026";
+$night-alt-rain-wind: "\f027";
+$night-alt-showers: "\f029";
+$night-alt-sleet: "\f0b4";
+$night-alt-sleet-storm: "\f06a";
+$night-alt-snow: "\f02a";
+$night-alt-snow-thunderstorm: "\f06d";
+$night-alt-snow-wind: "\f067";
+$night-alt-sprinkle: "\f02b";
+$night-alt-storm-showers: "\f02c";
+$night-alt-thunderstorm: "\f02d";
+$night-cloudy: "\f031";
+$night-cloudy-gusts: "\f02f";
+$night-cloudy-windy: "\f030";
+$night-fog: "\f04a";
+$night-hail: "\f032";
+$night-lightning: "\f033";
+$night-partly-cloudy: "\f083";
+$night-rain: "\f036";
+$night-rain-mix: "\f034";
+$night-rain-wind: "\f035";
+$night-showers: "\f037";
+$night-sleet: "\f0b3";
+$night-sleet-storm: "\f069";
+$night-snow: "\f038";
+$night-snow-thunderstorm: "\f06c";
+$night-snow-wind: "\f066";
+$night-sprinkle: "\f039";
+$night-storm-showers: "\f03a";
+$night-thunderstorm: "\f03b";
+$lunar-eclipse: "\f070";
+$stars: "\f077";
+$storm-showers: "\f01d";
+$thunderstorm: "\f01e";
+$night-alt-cloudy-high: "\f07e";
+$night-cloudy-high: "\f080";
+$night-alt-partly-cloudy: "\f081";
+
+.weather-code {
+  font-size: 24px;
+  font-family: "Weather";
+}
+
+@mixin code($code) {
+  &:before {
+    content: $code;
+  }
+}
+
+.weather-code- {
+
+  &01 {
+    &d {
+      @include code($day-sunny);
+    }
+
+    &n {
+      @include code($night-clear);
+    }
+  }
+
+  &02 {
+    &d {
+      @include code($day-cloudy);
+    }
+
+    &n {
+      @include code($night-cloudy);
+    }
+  }
+
+  &03 {
+    &d {
+      @include code('\f041');
+    }
+
+    &n {
+      @include code('\f041');
+    }
+  }
+
+  &04 {
+    &d {
+      @include code('\f013');
+    }
+
+    &n {
+      @include code('\f013');
+    }
+  }
+
+  &09 {
+    &d {
+      @include code('\f019');
+    }
+
+    &n {
+      @include code('\f019');
+    }
+  }
+
+  &10 {
+    &d {
+      @include code('\f008');
+    }
+
+    &n {
+      @include code('\f036');
+    }
+  }
+
+  &11 {
+    &d {
+      @include code('\f01e');
+    }
+
+    &n {
+      @include code('\f01e');
+    }
+  }
+
+  &13 {
+    &d {
+      @include code('\f01b');
+    }
+
+    &n {
+      @include code('\f01b');
+    }
+  }
+
+  &50 {
+    &d {
+      @include code('\f014');
+    }
+
+    &n {
+      @include code('\f014');
+    }
+  }
+}

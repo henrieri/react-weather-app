@@ -1,0 +1,26 @@
+.search-input--container {
+  width: 675px;
+  position: relative;
+
+  .input--search {
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $dark;
+    height: 60px;
+    width: 100%;
+    font-size: 48px;
+    outline: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,31 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $dark;
+}
+
+.app--container {
+  background: linear-gradient(135deg, $pink-dark, $pink-light);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.view--container {
+  $width: 1000px;
+  $height: $width / 1.75;
+  width: $width;
+  height: $height;
+  background-color: $white;
+  max-width: 80%;
+  box-shadow: -1px 0px 13px 1px rgba(0,0,0,0.45);
+}
+
+.search--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}

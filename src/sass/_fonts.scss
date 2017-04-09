@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Weather';
+  src: local('./fonts/weather/weathericons-regular-webfont.woff'), url('./fonts/weather/weathericons-regular-webfont.woff') format('woff');
+}
+
+.weather-icon {
+  font-family: 'Weather', sans-serif;
+}

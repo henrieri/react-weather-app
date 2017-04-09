@@ -1,0 +1,87 @@
+.results--container {
+  padding: 30px;
+
+  .results--header {
+    display: flex;
+    align-items: center;
+  }
+
+  .city {
+    margin: 0;
+    margin-left: 30px;
+    font-size: 40px;
+    letter-spacing: 0.2px;
+    position: relative;
+    top: 1px;
+  }
+
+  .toggle-metrics {
+    margin-left: auto;
+  }
+
+  .detailed-description--container {
+    padding-top: 100px;
+
+    .weather-date {
+      font-size: 36px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+
+    .weather-text {
+      font-size: 30px;
+      font-weight: 300;
+
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .weather-description {
+      display: flex;
+      align-items: center;
+
+      .weather-col-left {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+
+        .degrees {
+          color: $pink;
+          font-size: 96px;
+          margin-right: 30px;
+        }
+
+        .weather-icon {
+          font-size: 96px;
+          color: $pink;
+        }
+      }
+    }
+
+    .weather-timetable {
+      color: $pink;
+
+      td {
+        padding: 2px 0;
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+    }
+  }
+
+  .days--container {
+    display: flex;
+    justify-content: space-around;
+
+    .day--container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
