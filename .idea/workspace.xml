@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_mixins.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sass/_mixins.scss">
+      <file leaf-file-name="_containers.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sass/_containers.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+            <state relative-caret-position="324">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -69,9 +69,9 @@
         <option value="$PROJECT_DIR$/src/sass/_search-view.scss" />
         <option value="$PROJECT_DIR$/src/sass/_elements.scss" />
         <option value="$PROJECT_DIR$/src/sass/_results-view.scss" />
-        <option value="$PROJECT_DIR$/src/sass/_containers.scss" />
         <option value="$PROJECT_DIR$/src/sass/_app.scss" />
         <option value="$PROJECT_DIR$/src/sass/_mixins.scss" />
+        <option value="$PROJECT_DIR$/src/sass/_containers.scss" />
       </list>
     </option>
   </component>
@@ -352,12 +352,12 @@
       <workItem from="1491412998138" duration="3428000" />
       <workItem from="1491589665598" duration="5143000" />
       <workItem from="1491627822832" duration="19536000" />
-      <workItem from="1491719073601" duration="12995000" />
+      <workItem from="1491719073601" duration="13092000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41102000" />
+    <option name="totallyTimeSpent" value="41199000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1855" y="24" width="1855" height="1056" extended-state="6" />
@@ -719,32 +719,32 @@
         <state relative-caret-position="900">
           <caret line="119" column="0" selection-start-line="119" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
           <folding>
-            <marker date="1491732004931" expanded="true" signature="23:108" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="126:286" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="305:450" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="471:583" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="590:723" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="734:776" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="789:809" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="826:860" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="887:926" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1162:1165" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1213:1233" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1265:1345" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1318:1338" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1377:1420" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1448:1563" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1601:1625" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1680:1705" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1774:1839" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="1908:1950" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2032:2064" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2140:2160" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2245:2285" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2673:2842" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2858:2899" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="2990:3009" placeholder="{...}" />
-            <marker date="1491732004931" expanded="true" signature="3006:3009" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="23:108" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="126:286" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="305:450" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="471:583" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="590:723" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="734:776" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="789:809" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="826:860" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="887:926" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1162:1165" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1213:1233" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1265:1345" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1318:1338" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1377:1420" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1448:1563" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1601:1625" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1680:1705" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1774:1839" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="1908:1950" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2032:2064" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2140:2160" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2245:2285" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2673:2842" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2858:2899" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="2990:3009" placeholder="{...}" />
+            <marker date="1491732068228" expanded="true" signature="3006:3009" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -957,19 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_search-view.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <marker date="1491731506014" expanded="true" signature="19:200" placeholder="{...}" />
-            <marker date="1491731506014" expanded="true" signature="26:113" placeholder="{...}" />
-            <marker date="1491731506014" expanded="true" signature="119:198" placeholder="{...}" />
-            <marker date="1491731506014" expanded="true" signature="163:194" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_fonts.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -981,10 +968,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/_app.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+          <folding>
+            <marker date="1491732155601" expanded="true" signature="10:14" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sass/_results-view.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="90" column="6" selection-start-line="90" selection-start-column="6" selection-end-line="90" selection-end-column="6" />
+        <state relative-caret-position="1620">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
           <folding>
             <marker date="1491732004795" expanded="true" signature="20:1678" placeholder="{...}" />
             <marker date="1491732004795" expanded="true" signature="59:108" placeholder="{...}" />
@@ -1009,31 +1014,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_containers.scss">
+    <entry file="file://$PROJECT_DIR$/src/sass/_search-view.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="198">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
           <folding>
-            <marker date="1491732004791" expanded="true" signature="5:88" placeholder="{...}" />
-            <marker date="1491732004791" expanded="true" signature="106:273" placeholder="{...}" />
-            <marker date="1491732004791" expanded="true" signature="292:475" placeholder="{...}" />
-            <marker date="1491732004791" expanded="true" signature="496:608" placeholder="{...}" />
+            <marker date="1491731506014" expanded="true" signature="19:200" placeholder="{...}" />
+            <marker date="1491731506014" expanded="true" signature="26:113" placeholder="{...}" />
+            <marker date="1491731506014" expanded="true" signature="119:198" placeholder="{...}" />
+            <marker date="1491731506014" expanded="true" signature="163:194" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_app.scss">
+    <entry file="file://$PROJECT_DIR$/src/sass/_containers.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
+        <state relative-caret-position="324">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
