@@ -26,8 +26,8 @@ export default class Results extends Component {
         useOldData = true;
       }
 
-      if (useOldData) {
-        this.state = JSON.parse(localStorage.resultsState);
+      if (useOldData && !oldState.isError) {
+        this.state = oldState;
         return;
       }
     }
