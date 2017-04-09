@@ -1,5 +1,5 @@
 .results--container {
-  padding: 30px;
+  padding: 35px;
 
   .results--header {
     display: flex;
@@ -20,7 +20,8 @@
   }
 
   .detailed-description--container {
-    padding-top: 100px;
+    padding-top: 75px;
+    padding-bottom: 40px;
 
     .weather-date {
       font-size: 36px;
@@ -40,16 +41,17 @@
     .weather-description {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
 
       .weather-col-left {
         display: flex;
         align-items: center;
-        margin-right: 30px;
+        margin-right: 40px;
 
         .degrees {
           color: $pink;
           font-size: 96px;
-          margin-right: 30px;
+          margin-right: 40px;
         }
 
         .weather-icon {
@@ -64,24 +66,37 @@
 
       td {
         padding: 2px 0;
+        width: 60px;
+        font-size: 22px;
 
         &:last-child {
           text-align: right;
         }
       }
-
     }
   }
 
   .days--container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
     .day--container {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin-bottom: 20px;
+      padding: 0 5px;
+
+      .day--name {
+        margin-bottom: 6px;
+      }
+
+      .day--icon {
+        margin-bottom: 6px;
+        font-size: 40px;
+      }
     }
   }
 }

@@ -1,6 +1,8 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: $dark;
+  margin: 0;
+  padding: 0;
 }
 
 .app--container {
@@ -16,7 +18,7 @@ body {
   $width: 1000px;
   $height: $width / 1.75;
   width: $width;
-  height: $height;
+  min-height: $height;
   background-color: $white;
   max-width: 80%;
   box-shadow: -1px 0px 13px 1px rgba(0,0,0,0.45);

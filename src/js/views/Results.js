@@ -155,7 +155,7 @@ export default class Results extends Component {
   }
 
   getCurrentlyActiveDateString() {
-    return moment().format('dddd, MMMM Do YYYY');
+    return moment.unix(this.state.currentWeatherData.dt).format('dddd, MMMM Do YYYY');
   }
 
   degrees(celcius) {

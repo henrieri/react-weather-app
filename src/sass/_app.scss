@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 @import "containers";
 @import "buttons";
 @import "elements";
@@ -7,3 +8,4 @@
 
 //Views
 @import "results-view";
+@import "search-view";
