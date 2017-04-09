@@ -13,6 +13,11 @@
     letter-spacing: 0.2px;
     position: relative;
     top: 1px;
+
+    @include bp(700px) {
+      font-size: 32px;
+      margin-left: 20px;
+    }
   }
 
   .toggle-metrics {
@@ -52,11 +57,19 @@
           color: $pink;
           font-size: 96px;
           margin-right: 40px;
+
+          @include bp(700px) {
+            font-size: 64px;
+          }
         }
 
         .weather-icon {
           font-size: 96px;
           color: $pink;
+
+          @include bp(700px) {
+            font-size: 64px;
+          }
         }
       }
     }
@@ -96,6 +109,11 @@
       .day--icon {
         margin-bottom: 6px;
         font-size: 40px;
+      }
+
+      @include bp(700px) {
+        min-width: 20%;
+        flex-basis: 25%;
       }
     }
   }

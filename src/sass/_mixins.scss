@@ -1,3 +1,12 @@
-@mixin bp {
+@mixin max-width($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
 
+@mixin bp($bp) {
+
+  @include max-width($bp) {
+    @content;
+  }
 }

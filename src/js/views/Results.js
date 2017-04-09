@@ -13,25 +13,31 @@ export default class Results extends Component {
     super(props);
 
     if (typeof localStorage.resultsState !== 'undefined') {
-      this.state = JSON.parse(localStorage.resultsState);
+
+      let oldState = JSON.parse(localStorage.resultsState);
+
+      if (this.props.match.params.method == 'current' || oldState.city === this.props.match.params.query) {
+        this.state = JSON.parse(localStorage.resultsState);
+        return;
+      }
     }
-    else {
-      this.state = {
-        fahrenheit: false,
-        currentWeatherData: {},
-        weekWeatherData: [],
-        isError: false,
-        errorMessage: null,
-        city: null,
-        isCurrentDataLoaded: false,
-        isWeekDataLoaded: false
-      };
-    }
+
+    this.state = {
+      fahrenheit: false,
+      currentWeatherData: {},
+      weekWeatherData: [],
+      isError: false,
+      errorMessage: null,
+      city: null,
+      isCurrentDataLoaded: false,
+      isWeekDataLoaded: false
+    };
+
   }
 
   getApiParams() {
     return {
-      APPID: 'fa81ac63f3b40e8dee3ac434e926ed0d',
+      APPID,
       mode: 'json',
       units: 'metric'
     }
@@ -45,6 +51,7 @@ export default class Results extends Component {
 
     if (this.props.match.params.method === 'city') {
       this.getDataFromCity(this.props.match.params.query);
+
       this.setState({
         city: this.props.match.params.query
       });
@@ -58,7 +65,7 @@ export default class Results extends Component {
   setWeekData(response) {
 
     this.setState({
-      weekWeatherData: response.list,
+      weekWeatherData: response.data.list,
       isWeekDataLoaded: true
     });
   }
@@ -66,7 +73,7 @@ export default class Results extends Component {
   setCurrentData(response) {
 
     this.setState({
-      currentWeatherData: response,
+      currentWeatherData: response.data,
       isCurrentDataLoaded: true
     });
   }
@@ -78,16 +85,19 @@ export default class Results extends Component {
     });
   }
 
-  getFromApi(path, params, success, failure = (error) => this.handleError(error)) {
-
+  getFromMockData(path, success) {
     if (path === 'forecast/daily') {
       success(this.mockDailyData());
     }
     else {
       success(this.mockCurrentData());
     }
-    return;
+  }
 
+  getFromApi(path, params, success, failure = (error) => this.handleError(error)) {
+
+    //this.getFromMockData(path, success);
+    //return;
 
     params = {
       ...this.getApiParams(),
@@ -368,16 +378,33 @@ export default class Results extends Component {
       <ToggleButton
         activeLabel="°C"
         inactiveLabel="°F"
-        activeLabelStyle = {{
-          color: 'black'
+        activeLabelStyle={{
+          color: '#4F646E',
+          width: '40px',
+          fontFamily: 'Roboto, sans-serif'
         }}
-        inactiveLabelStyle = {{
-          color: 'black'
+        inactiveLabelStyle={{
+          color: '#4F646E',
+          width: '40px',
+          fontFamily: 'Roboto, sans-serif'
         }}
-        containerStyle = {{
-          border: '1px solid black',
-          borderRadius: '10px'
+        containerStyle={{
+          border: '1px solid #4F646E',
+          borderRadius: '14px',
+          width: '70px',
+          height: '28px'
         }}
+
+        thumbStyle={{
+          height: '26px',
+          width: '36px',
+          borderRadius: '14px'
+        }}
+
+        trackStyle={{
+          width: '70px'
+        }}
+
         colors={{
           activeThumb: {
             base: '#FFFFFF'
