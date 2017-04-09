@@ -95,7 +95,7 @@ export default class Results extends Component {
   }
 
   handleError(error) {
-    console.log('setting error');
+
     this.setState({
       isError: true,
       errorMessage: error
@@ -152,7 +152,6 @@ export default class Results extends Component {
       return;
     }
 
-    console.log('getting');
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -160,7 +159,6 @@ export default class Results extends Component {
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
 
-        console.log(lat, lon);
 
         this.getFromApi('forecast/daily', {
           lat,
@@ -176,7 +174,7 @@ export default class Results extends Component {
 
       },
       (error) => {
-        console.log(error);
+      
         this.handleError(error.message)
       }
     );
