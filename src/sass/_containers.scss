@@ -44,3 +44,32 @@ $height: $width / 1.75;
   height: 100%;
   min-height: $height;
 }
+
+.error--container, .loading--container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  position: relative;
+  min-height: 400px;
+
+  @include bp(700px) {
+    height: 100%;
+    min-height: initial;
+  }
+
+  h1 {
+    max-width: 90%;
+    word-wrap: break-word;
+
+    @include bp(700px) {
+      font-size: 20px;
+    }
+  }
+
+  a {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}

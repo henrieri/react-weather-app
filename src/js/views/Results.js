@@ -16,7 +16,17 @@ export default class Results extends Component {
 
       let oldState = JSON.parse(localStorage.resultsState);
 
-      if (this.props.match.params.method == 'current' || oldState.city === this.props.match.params.query) {
+      let useOldData = false;
+
+      if (this.props.match.params.method === 'current' && oldState.method === 'current') {
+        useOldData = true;
+      }
+
+      if (this.props.match.params.method !== 'current' && oldState.city === this.props.match.params.query) {
+        useOldData = true;
+      }
+
+      if (useOldData) {
         this.state = JSON.parse(localStorage.resultsState);
         return;
       }
@@ -30,7 +40,8 @@ export default class Results extends Component {
       errorMessage: null,
       city: null,
       isCurrentDataLoaded: false,
-      isWeekDataLoaded: false
+      isWeekDataLoaded: false,
+      method: 'city'
     };
 
   }
@@ -53,10 +64,15 @@ export default class Results extends Component {
       this.getDataFromCity(this.props.match.params.query);
 
       this.setState({
-        city: this.props.match.params.query
+        city: this.props.match.params.query,
+        method: 'city'
       });
     }
     else {
+      this.setState({
+        city: this.props.match.params.query,
+        method: 'current'
+      });
       this.getDataFromCurrentLocation();
     }
   }
@@ -79,8 +95,9 @@ export default class Results extends Component {
   }
 
   handleError(error) {
+    console.log('setting error');
     this.setState({
-      error: true,
+      isError: true,
       errorMessage: error
     });
   }
@@ -135,11 +152,15 @@ export default class Results extends Component {
       return;
     }
 
+    console.log('getting');
+
     navigator.geolocation.getCurrentPosition(
       (position) => {
 
         let lat = position.coords.latitude;
         let lon = position.coords.longitude;
+
+        console.log(lat, lon);
 
         this.getFromApi('forecast/daily', {
           lat,
@@ -155,6 +176,7 @@ export default class Results extends Component {
 
       },
       (error) => {
+        console.log(error);
         this.handleError(error.message)
       }
     );
@@ -184,7 +206,7 @@ export default class Results extends Component {
 
     let trs = [];
 
-    Object.keys(map).map((key) => {
+    Object.keys(map).forEach((key) => {
       trs.push(<tr key={key}>
         <td>{map[key]}</td>
         <td>{this.degrees(this.state.weekWeatherData[0].temp[key])}</td>
@@ -332,7 +354,10 @@ export default class Results extends Component {
   render() {
 
     if (this.state.isError) {
-      return (<div className="error">
+      return (<div className="error--container">
+        <Link className="btn btn--back" to="/">
+          <IconBack />
+        </Link>
         <h1>
           Error! {this.state.errorMessage}
         </h1>
@@ -340,7 +365,11 @@ export default class Results extends Component {
     }
 
     if (!this.isLoaded()) {
-      return (<div className="loading"><h1>Loading...</h1></div>);
+      return (<div className="loading--container">
+        <Link className="btn btn--back" to="/">
+          <IconBack />
+        </Link>
+        <h1>Loading...</h1></div>);
     }
 
     return (
