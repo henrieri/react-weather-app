@@ -98,7 +98,7 @@ export default class Results extends Component {
   }
 
   setCurrentData(response) {
-    console.log(response.data);
+
     this.setState({
       currentWeatherData: response.data,
       isCurrentDataLoaded: true
@@ -343,8 +343,6 @@ export default class Results extends Component {
     let days = [];
 
     this.state.weekWeatherData.forEach((item, index) => {
-
-      console.log(item);
 
       days.push(
         <div key={index} className="day--container">
