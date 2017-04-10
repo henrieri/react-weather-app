@@ -80,14 +80,25 @@ export default class Results extends Component {
 
   setWeekData(response) {
 
+    // Check if first day is previous because API seems to give some times previous as a first day.
+
+    let list = response.data.list;
+
+    if (moment.unix(list[0].dt).format('dddd') !== moment().format('dddd')) {
+      list = list.slice(1, 8);
+    }
+    else {
+      list = list.slice(0, 7);
+    }
+
     this.setState({
-      weekWeatherData: response.data.list,
+      weekWeatherData: list,
       isWeekDataLoaded: true
     });
   }
 
   setCurrentData(response) {
-
+    console.log(response.data);
     this.setState({
       currentWeatherData: response.data,
       isCurrentDataLoaded: true
@@ -134,11 +145,11 @@ export default class Results extends Component {
 
   getDataFromCity(city) {
 
-    // Get weather data for 7 days
+    // Get weather data for 7 days // get 8 because sometimes API gives first day as yesterday.
 
     this.getFromApi('forecast/daily', {
       q: city,
-      cnt: 7
+      cnt: 8
     }, (response) => this.setWeekData(response));
 
     // Get today's weather data
@@ -332,6 +343,8 @@ export default class Results extends Component {
     let days = [];
 
     this.state.weekWeatherData.forEach((item, index) => {
+
+      console.log(item);
 
       days.push(
         <div key={index} className="day--container">
